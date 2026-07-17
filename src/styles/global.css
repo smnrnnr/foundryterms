@@ -282,20 +282,26 @@ main{flex:1;padding:0 var(--pad);width:100%;}
   .hdr{flex-direction:column;gap:14px;align-items:flex-start;border-radius:0;
     padding-left:calc(var(--pad) + var(--ti));padding-right:calc(var(--pad) + var(--ti));}
   .hdr-nav{flex-wrap:wrap;gap:12px 24px;}
-  .hdr-masthead{flex-direction:column;gap:20px;}
+  .hdr-masthead{flex-direction:column;gap:18px;padding-top:26px;padding-bottom:22px;}
 
-  /* homepage table: clean horizontal scroll, header not sticky on mobile */
+  /* homepage table: horizontal scroll; rows align to full width so the
+     rules span the whole scroll; header not sticky on mobile */
   .db-table{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  .trow{min-width:600px;gap:16px;}
+  .db-scroll{width:max-content;min-width:100%;}
+  .trow{gap:16px;}
   .trow--head{position:static;top:auto;}
+
+  /* footer: let the links wrap so nothing is cut off */
+  .ftr-row{flex-wrap:wrap;}
 
   /* foundry: key facts in a single column */
   .fd-keyfacts{grid-template-columns:1fr;}
   .kf{border-right:0 !important;}
   .kf--empty{display:none;}
 
-  /* foundry & guide: sections stack, no columns */
-  .blk,.gs{grid-template-columns:1fr;gap:0;padding:36px 0;}
+  /* foundry & guide: sections stack, no columns; bigger section numbers */
+  .blk,.gs{grid-template-columns:1fr;gap:0;padding:32px 0;}
+  .blk-n,.gs-n{font-size:80px;position:static;top:auto;line-height:.9;margin-bottom:20px;}
   .blk-aside,.gs-aside{grid-column:auto;margin-top:16px;}
   .blk-title,.blk-lead{padding-left:0;}
   .blk-row{grid-template-columns:1fr;gap:4px;padding:14px 0;}
