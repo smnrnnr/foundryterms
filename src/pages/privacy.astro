@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import legal from "../data/legal.json";
+const page = legal.privacy;
+---
+<Base
+  title="Privacy Policy — Type Foundry Terms"
+  nav="legal"
+  description="Privacy policy for Type Foundry Terms — no tracking, no cookies, no analytics, no personal data collected."
+>
+
+  <main>
+    <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
+    <div class="rule"></div>
+    <div class="lg-doc">
+      <h1 class="lg-title">{page.title}</h1>
+      <p class="lg-updated mono">{page.updated}</p>
+      <div class="lg-sections">
+        {page.sections.map((sec) => (
+          <div class="lg-sec">
+            <h2 class="lg-h">{sec.h}</h2>
+            <div class="lg-c">
+              {sec.p && sec.p.map((p) => <p class="lg-p">{p}</p>)}
+              {sec.lines && (
+                <div class="lg-lines mono">
+                  {sec.lines.map((l) => <span>{l}</span>)}
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+
+</Base>

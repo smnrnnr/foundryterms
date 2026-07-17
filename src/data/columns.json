@@ -1,0 +1,17 @@
+{
+  "_note": "Table columns for the overview. 'key' must match the keys under 'table' in foundries.json. 'always' = cannot be hidden. 'default' = visible on load.",
+  "columns": [
+    { "key": "name",     "label": "Foundry",       "always": true, "default": true  },
+    { "key": "licensee", "label": "Licensee",      "default": true  },
+    { "key": "sitz",     "label": "Location",      "default": false },
+    { "key": "desktop",  "label": "Desktop",       "default": true  },
+    { "key": "web",      "label": "Web",           "default": true  },
+    { "key": "logo",     "label": "Logo",          "default": true  },
+    { "key": "trial",    "label": "Trial",         "default": true  },
+    { "key": "studi",    "label": "Discount",      "default": true  },
+    { "key": "app",      "label": "App",           "default": false },
+    { "key": "signage",  "label": "Signage",       "default": false },
+    { "key": "transfer", "label": "Transferable",  "default": false },
+    { "key": "recht",    "label": "Jurisdiction",  "default": false }
+  ]
+}

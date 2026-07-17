@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+import guideData from "../data/guide.json";
+const {
+  title = "Type Foundry Terms — Font Licensing Database",
+  nav = "db",
+  description = "Compare how type foundries license their fonts — who pays, desktop and web pricing, logo surcharges, trials and discounts. A reference database for designers.",
+} = Astro.props;
+const intro = guideData.intro;
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).href
+  : Astro.url.href;
+
+// ⚠️ STILLER START: true = die Seite bittet Google, sie NICHT in den Suchindex
+// aufzunehmen. So lange auf true lassen, wie wir auf der Übergangs-Adresse sind
+// und Foundries aufbauen. Zum offiziellen Launch (eigene Domain, genug Inhalt)
+// auf false setzen — das ist der einzige nötige Schritt, um auffindbar zu werden.
+const NOINDEX = false;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {NOINDEX && <meta name="robots" content="noindex, nofollow" />}
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Type Foundry Terms" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+</head>
+<body>
+<div class="app">
+
+  <div class="hdr-masthead-wrap">
+    <div class="hdr-masthead">
+      <a class="hdr-title" href="/">Type Foundry Terms<span class="hdr-beta">Beta</span></a>
+      <p class="hdr-intro mono">{intro}</p>
+    </div>
+  </div>
+
+  <div class="hdr-bandwrap">
+    <div class="hdr">
+      <nav class="hdr-nav">
+        <a class={"mono hdr-link" + (nav === "db" ? " is-active" : "")} href="/">Foundry Overview</a>
+        <a class={"mono hdr-link" + (nav === "guide" ? " is-active" : "")} href="/guide">How to Buy Fonts</a>
+      </nav>
+      <a class="hdr-support mono" href="https://ko-fi.com/alltagstudio" target="_blank" rel="noopener" id="btn-support">Support</a>
+    </div>
+  </div>
+
+  <div class="hdr-notice-wrap">
+    <p class="hdr-notice mono">
+      This database is still being built and may contain errors.
+      Spotted one, or want to contribute?
+      <a href="mailto:mail@foundryterms.com?subject=Type%20Foundry%20Terms%20feedback">Get in touch →</a>
+    </p>
+  </div>
+
+  <slot />
+
+  <footer class="ftr">
+    <div class="rule"></div>
+    <div class="ftr-row mono">
+      <span>Type Foundry Terms · 2026</span>
+      <span class="ftr-sep">·</span>
+      <a href="/imprint">Legal Notice</a>
+      <span class="ftr-sep">·</span>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <p class="mono ftr-note">
+      This database is a reference guide, not legal advice. The information
+      is carefully researched but may change at any time — always refer to
+      the current EULA of the respective foundry.
+    </p>
+    <p class="mono ftr-callout">
+      Type Foundry Terms is a free, independent project — and we're looking for
+      a typeface to use across the site. If you're a foundry or designer,
+      <a href="mailto:mail@foundryterms.com?subject=Typeface%20for%20Type%20Foundry%20Terms">we'd love to hear from you →</a>.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "_note": "Content for the Imprint and Privacy Policy pages. Replace placeholder text in square brackets with your own details.",
+
+  "imprint": {
+    "title": "Legal Notice",
+    "updated": "As of: 2026",
+    "sections": [
+      {
+        "h": "Information pursuant to § 5 DDG",
+        "lines": ["Simon Renner", "Lenaustraße 14", "70193 Stuttgart"]
+      },
+      {
+        "h": "Contact",
+        "lines": ["Email: mail@foundryterms.com"]
+      },
+      {
+        "h": "Responsible for content pursuant to § 18 Para. 2 MStV",
+        "lines": ["Simon Renner", "Address as above"]
+      },
+      {
+        "h": "Liability for content",
+        "p": ["Type Foundry Terms is a private, non-commercial information project. Content is compiled with the greatest possible care — however, no claim is made as to completeness, currency, or accuracy. The current EULA of each individual foundry is always the authoritative document."]
+      },
+      {
+        "h": "Liability for links",
+        "p": ["This site links to external websites of the listed foundries. I have no influence over their content; responsibility lies solely with the respective provider."]
+      },
+      {
+        "h": "Copyright",
+        "p": ["The typeface names, trademarks, and logos mentioned are the property of their respective foundries and are referenced here for informational purposes only."]
+      }
+    ]
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "As of: 2026",
+    "sections": [
+      {
+        "h": "In brief",
+        "p": ["This website does not collect personal data. There is no registration, no contact forms, no cookies, no tracking, and no analytics tools. No data is shared with or sold to third parties."]
+      },
+      {
+        "h": "Server log files",
+        "p": ["When you access the site, the hosting provider may store technically necessary access data (e.g. IP address, date and time, page accessed, browser type) in server log files. This is done to ensure reliable operation (Art. 6 Para. 1 lit. f GDPR) and is not merged with other data. Details are governed by the host's privacy policy. The site is hosted on GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA)."]
+      },
+      {
+        "h": "Fonts (jsDelivr CDN)",
+        "p": ["This site loads fonts via the jsDelivr CDN. When loading, a connection to CDN servers may be established and your IP address transmitted. If you want to avoid this, fonts can also be self-hosted."]
+      },
+      {
+        "h": "Your rights",
+        "p": ["You have the right to access, rectification, erasure, and restriction of processing at any time, as well as the right to lodge a complaint with a supervisory authority. As virtually no personal data is processed here, this generally only applies to the host's log files."]
+      },
+      {
+        "h": "Contact",
+        "lines": ["Responsible party: Simon Renner", "Email: mail@foundryterms.com"]
+      }
+    ]
+  }
+}

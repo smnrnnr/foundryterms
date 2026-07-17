@@ -1,0 +1,131 @@
+---
+import Base from "../../layouts/Base.astro";
+import data from "../../data/foundries.json";
+
+export function getStaticPaths() {
+  return data.foundries.map((f) => ({
+    params: { slug: f.slug },
+    props: { foundry: f },
+  }));
+}
+
+const { foundry } = Astro.props;
+
+const sorted = [...data.foundries].sort((a, b) => a.name.localeCompare(b.name, "de"));
+const idx = sorted.findIndex(f => f.slug === foundry.slug);
+const next = sorted[(idx + 1) % sorted.length];
+
+const fillerCount = (3 - (foundry.keyfacts.length % 3)) % 3;
+
+function fmtGeprueft(s) {
+  if (!s) return "—";
+  const [y, m] = s.split("-");
+  return `${m} / ${y}`;
+}
+
+const metaDescription = `${foundry.name}: how they license fonts — pricing model, license types, extra costs, discounts, and legal terms at a glance.`;
+---
+<Base title={`${foundry.name} — Type Foundry Terms`} nav="db" description={metaDescription}>
+
+  <main class="fd">
+    <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
+
+    <div class="rule"></div>
+
+    <header class="fd-head">
+      <div class="fd-head-l">
+        <h1 class="fd-name">{foundry.name}</h1>
+        <a class="mono fd-url" href={foundry.urlFull || "/"} target="_blank" rel="noopener">
+          {foundry.url}<span class="arr">→</span>
+        </a>
+      </div>
+      <div class="fd-identity-col">
+        <dl class="fd-identity">
+          {foundry.identity.map((row) => (
+            <div class="fd-id-row">
+              <dt class="mono">{row.k}</dt>
+              <dd class="mono">
+                {row.href
+                  ? <a href={row.href} target="_blank" rel="noopener">{row.v}</a>
+                  : row.v}
+              </dd>
+            </div>
+          ))}
+        </dl>
+        <div class="fd-meta fd-meta--band mono">
+          <span class="fd-checked">Verified <b>{fmtGeprueft(foundry.geprueft)}</b></span>
+          <a class="fd-report" href={`mailto:mail@foundryterms.com?subject=${encodeURIComponent(`Error report: ${foundry.name} — Type Foundry Terms`)}`}>
+            Report an error<span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    {foundry.status && (
+      <div class="fd-status mono">{foundry.status}</div>
+    )}
+
+    <div class="rule"></div>
+
+    <section class="fd-keyfacts">
+      {foundry.keyfacts.map((kf) => (
+        <div class="kf">
+          <span class="mono kf-k">{kf.k}</span>
+          <span class="kf-v">{kf.v}</span>
+          {kf.sub && (
+            <span class={"mono kf-sub" + (kf.hl ? " hl" : "")}>{kf.sub}</span>
+          )}
+        </div>
+      ))}
+      {Array.from({ length: fillerCount }).map(() => (
+        <div class="kf kf--empty" aria-hidden="true" />
+      ))}
+    </section>
+
+    <section class="fd-blocks">
+      {foundry.blocks.map((block) => (
+        <article class="blk">
+          <div class="blk-n mono">{block.n}</div>
+          <div class="blk-main">
+            <h2 class="blk-title">{block.title}</h2>
+            {block.lead && <p class="blk-lead">{block.lead}</p>}
+            <dl class="blk-rows">
+              {block.rows.map((row) => (
+                <div class="blk-row">
+                  <dt class="mono blk-k">{row.k}</dt>
+                  <dd class="blk-t">
+                    {row.link
+                      ? <span set:html={row.t.replace("EULA", `<a class="blk-inlink" href="https://${row.link}" target="_blank" rel="noopener">EULA</a>`)} />
+                      : row.t}
+                    {row.sub && <span class="blk-sub">{row.sub}</span>}
+                    {row.hl && (
+                      <div class="blk-flags">
+                        <span class="flag">{row.hl}</span>
+                      </div>
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div class="blk-aside">
+            {block.example && (
+              <aside class={"ex ex--" + block.example.kind}>
+                <span class="mono ex-label">{block.example.label}</span>
+                <p class="ex-text">{block.example.t}</p>
+              </aside>
+            )}
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <div class="fd-foot">
+      <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
+      <a href={`/foundry/${next.slug}`} class="mono fd-next">
+        Next foundry: {next.short || next.name}<span class="arr">→</span>
+      </a>
+    </div>
+  </main>
+
+</Base>
