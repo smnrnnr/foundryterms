@@ -1,0 +1,55 @@
+---
+import Base from "../layouts/Base.astro";
+import guide from "../data/guide.json";
+---
+<Base
+  title="How to Buy Fonts — Type Foundry Terms"
+  nav="guide"
+  description="A plain-language guide to buying font licenses: license types, how pricing works, extra costs, trials, and what to check before you buy."
+>
+
+  <main class="gd">
+    <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
+
+    <div class="rule"></div>
+
+    <div class="gd-sections">
+      {guide.sections.map((s) => (
+        <article class="gs">
+          <div class="gs-n mono">{s.n}</div>
+          <div class="gs-main">
+            <h2 class="gs-title">{s.title}</h2>
+            <div class="gs-body">
+              {s.body.map((p) => (
+                <p class="gs-p">{p}</p>
+              ))}
+              {s.list && s.list.length > 0 && (
+                <ul class="gs-list">
+                  {s.list.map((li) => (
+                    <li class="gs-li">
+                      <span class="gs-li-mark" aria-hidden="true"></span>
+                      <span>{li}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+          <div class="gs-aside">
+            {s.example && (
+              <aside class={"ex ex--" + s.example.kind}>
+                <span class="mono ex-label">{s.example.label}</span>
+                <p class="ex-text">{s.example.t}</p>
+              </aside>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="fd-foot">
+      <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
+    </div>
+  </main>
+
+</Base>

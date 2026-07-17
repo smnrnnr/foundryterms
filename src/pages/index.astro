@@ -1,0 +1,183 @@
+---
+import Base from "../layouts/Base.astro";
+import data from "../data/foundries.json";
+import columnsData from "../data/columns.json";
+
+const foundries = [...data.foundries].sort((a, b) => a.name.localeCompare(b.name, "de"));
+const columns = columnsData.columns;
+
+const defaultVisible = columns.filter(c => c.default);
+
+function gridCols(cols) {
+  return cols.map(c => c.key === "name" ? "minmax(220px,1.6fr)" : "minmax(110px,1fr)").join(" ");
+}
+
+const initialGrid = gridCols(defaultVisible);
+const initialCount = defaultVisible.length;
+const totalCount = columns.length;
+---
+<Base
+  title="Type Foundry Terms — Font Licensing Database"
+  nav="db"
+  description="Compare how type foundries license their fonts — who pays, desktop and web pricing, logo surcharges, trials and discounts. A reference database for designers."
+>
+
+  <main class="db">
+
+    <div class="db-tools">
+      <div class="ctl" id="col-ctl">
+        <button class="mono ctl-btn" id="col-btn">
+          Columns <span class="ctl-count" id="col-count">{initialCount} / {totalCount}</span>
+          <span class="ctl-caret" id="col-caret">↓</span>
+        </button>
+        <div class="ctl-menu" id="col-menu" style="display:none;">
+          {columns.map((c) => (
+            <label class={"mono ctl-item" + (c.always ? " is-locked" : "")}>
+              <input
+                type="checkbox"
+                data-col={c.key}
+                checked={c.default ? true : undefined}
+                disabled={c.always ? true : undefined}
+              />
+              <span class="ctl-box" />
+              {c.label}
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="db-table">
+      <div class="trow trow--head" id="db-head" style={`grid-template-columns:${initialGrid}`}>
+        {defaultVisible.map((c, i) => (
+          <span class="mono th" data-col={c.key}>
+            {c.label}
+            {i === 0 && (
+              <button class="sort-inline" id="sort-btn">
+                A–Z <span class="sort-arrow" id="sort-arrow">↑</span>
+              </button>
+            )}
+          </span>
+        ))}
+      </div>
+
+      <div id="db-rows">
+        {foundries.map((f) => (
+          <a
+            href={`/foundry/${f.slug}`}
+            class="trow trow--row"
+            style={`grid-template-columns:${initialGrid}`}
+            data-name={f.name}
+          >
+            {columns.map((c) => {
+              const isVisible = c.default;
+              const cell = f.table[c.key];
+              return (
+                <div class="td" data-col={c.key} style={isVisible ? "" : "display:none"}>
+                  {c.key === "name" ? (
+                    <span class="td-name">{f.short || f.name}</span>
+                  ) : !cell ? (
+                    <span class="cell-empty">—</span>
+                  ) : typeof cell === "string" ? (
+                    <span class="cell-v">{cell}</span>
+                  ) : (
+                    <span class="cell">
+                      <span class={"cell-v" + (cell.link ? " cell-link" : "")}>
+                        {cell.v}{cell.link ? <span class="arr">→</span> : ""}
+                      </span>
+                      {(cell.sub) && (
+                        <span class={"cell-sub mono" + (cell.hl ? " hl" : "")}>{cell.sub}</span>
+                      )}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <p class="mono db-foot">
+      Missing a foundry?{" "}
+      <a class="db-suggest" href="mailto:mail@foundryterms.com?subject=Foundry%20suggestion">
+        Suggest one<span class="arr">→</span>
+      </a>
+    </p>
+
+  </main>
+
+  <script define:vars={{ columns }}>
+    const COLS = columns;
+    const visible = {};
+    COLS.forEach(c => { visible[c.key] = !!(c.always || c.default); });
+    let asc = true;
+
+    function gridCols() {
+      return COLS
+        .filter(c => visible[c.key])
+        .map(c => c.key === "name" ? "minmax(220px,1.6fr)" : "minmax(110px,1fr)")
+        .join(" ");
+    }
+
+    function updateTable() {
+      const tpl = gridCols();
+      document.querySelectorAll(".trow").forEach(row => {
+        row.style.gridTemplateColumns = tpl;
+      });
+      COLS.forEach(c => {
+        document.querySelectorAll(`[data-col="${c.key}"]`).forEach(el => {
+          el.style.display = visible[c.key] ? "" : "none";
+        });
+      });
+      const on = COLS.filter(c => visible[c.key]).length;
+      document.getElementById("col-count").textContent = `${on} / ${COLS.length}`;
+    }
+
+    function sortRows() {
+      const wrap = document.getElementById("db-rows");
+      const rows = Array.from(wrap.querySelectorAll("a.trow--row"));
+      rows.sort((a, b) => {
+        const na = a.dataset.name || "";
+        const nb = b.dataset.name || "";
+        return asc ? na.localeCompare(nb, "de") : nb.localeCompare(na, "de");
+      });
+      rows.forEach(r => wrap.appendChild(r));
+      const arrow = document.getElementById("sort-arrow");
+      if (arrow) arrow.textContent = asc ? "↑" : "↓";
+      const btn = document.getElementById("sort-btn");
+      if (btn) { btn.childNodes[0].textContent = asc ? "A–Z " : "Z–A "; }
+    }
+
+    const colBtn = document.getElementById("col-btn");
+    const colMenu = document.getElementById("col-menu");
+    const colCaret = document.getElementById("col-caret");
+    let menuOpen = false;
+
+    function setMenuOpen(open) {
+      menuOpen = open;
+      colMenu.style.display = open ? "flex" : "none";
+      colCaret.classList.toggle("is-open", open);
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    colBtn.addEventListener("click", e => { e.stopPropagation(); setMenuOpen(!menuOpen); });
+    document.addEventListener("click", e => {
+      if (menuOpen && !document.getElementById("col-ctl").contains(e.target)) setMenuOpen(false);
+    });
+    colMenu.querySelectorAll("input[data-col]").forEach(input => {
+      input.addEventListener("change", () => {
+        visible[input.dataset.col] = input.checked;
+        updateTable();
+      });
+    });
+    document.getElementById("sort-btn")?.addEventListener("click", e => {
+      e.preventDefault();
+      asc = !asc;
+      sortRows();
+    });
+  </script>
+
+</Base>
