@@ -50,6 +50,7 @@ const totalCount = columns.length;
     <div class="rule"></div>
 
     <div class="db-table">
+      <div class="db-scroll">
       <div class="trow trow--head" id="db-head" style={`grid-template-columns:${initialGrid}`}>
         {defaultVisible.map((c, i) => (
           <span class="mono th" data-col={c.key}>
@@ -97,6 +98,7 @@ const totalCount = columns.length;
             })}
           </a>
         ))}
+      </div>
       </div>
     </div>
 
