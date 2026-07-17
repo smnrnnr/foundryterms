@@ -277,13 +277,26 @@ main{flex:1;padding:0 var(--pad);width:100%;}
   .fd-head{grid-template-columns:1fr;}
 }
 @media(max-width:720px){
-  :root{--pad:18px;}
-  .hdr{flex-direction:column;gap:14px;align-items:flex-start;}
+  :root{--pad:10px;--ti:10px;--ti2:8px;}
+  .hdr-bandwrap{padding-left:0;padding-right:0;}
+  .hdr{flex-direction:column;gap:14px;align-items:flex-start;border-radius:0;
+    padding-left:calc(var(--pad) + var(--ti));padding-right:calc(var(--pad) + var(--ti));}
   .hdr-nav{flex-wrap:wrap;gap:12px 24px;}
-  .db-table{overflow-x:auto;}
-  .trow{min-width:680px;}
+  .hdr-masthead{flex-direction:column;gap:20px;}
+
+  /* homepage table: clean horizontal scroll, header not sticky on mobile */
+  .db-table{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .trow{min-width:600px;gap:16px;}
+  .trow--head{position:static;top:auto;}
+
+  /* foundry: key facts in a single column */
   .fd-keyfacts{grid-template-columns:1fr;}
   .kf{border-right:0 !important;}
   .kf--empty{display:none;}
-  .hdr-masthead{flex-direction:column;gap:20px;}
+
+  /* foundry & guide: sections stack, no columns */
+  .blk,.gs{grid-template-columns:1fr;gap:0;padding:36px 0;}
+  .blk-aside,.gs-aside{grid-column:auto;margin-top:16px;}
+  .blk-title,.blk-lead{padding-left:0;}
+  .blk-row{grid-template-columns:1fr;gap:4px;padding:14px 0;}
 }
