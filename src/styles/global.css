@@ -77,12 +77,16 @@ main{flex:1;padding:0 var(--pad);width:100%;}
 .ftr-row a{color:var(--gray);transition:color .15s;}
 .ftr-row a:hover{color:var(--accent);}
 .ftr-sep{color:var(--gray);}
+.ftr-legal{display:inline-flex;gap:10px;align-items:baseline;white-space:nowrap;}
 .ftr-note{color:var(--gray);line-height:1.55;font-size:13px;
   padding:14px var(--ti) 0 var(--ti);}
 .ftr-callout{color:var(--gray);line-height:1.55;font-size:13px;
-  padding:0 var(--ti) 40px var(--ti);}
+  padding:0 var(--ti) 22px var(--ti);}
 .ftr-callout a{color:var(--accent);}
 .ftr-callout a:hover{text-decoration:underline;}
+.ftr-legal-row{display:flex;gap:10px;align-items:baseline;padding:2px var(--ti) 40px;}
+.ftr-legal-row a{color:var(--gray);transition:color .15s;}
+.ftr-legal-row a:hover{color:var(--accent);}
 
 /* ════════ DATENBANK ══════════════════════════════════ */
 .db{padding-top:0;}
@@ -275,28 +279,40 @@ main{flex:1;padding:0 var(--pad);width:100%;}
   .blk,.gs{grid-template-columns:48px minmax(0,1fr);gap:28px;}
   .blk-aside,.gs-aside{grid-column:2;margin-top:8px;}
   .fd-head{grid-template-columns:1fr;}
+
+  /* table scrolls horizontally below desktop; name column fixed, rules span full width, header not sticky */
+  .db-table{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;}
+  .db-table::-webkit-scrollbar{display:none;}
+  .db-scroll{width:max-content;min-width:100%;}
+  .trow--head{position:static;top:auto;}
 }
 @media(max-width:720px){
   :root{--pad:10px;--ti:10px;--ti2:8px;}
-  .hdr-bandwrap{padding-left:0;padding-right:0;}
-  .hdr{flex-direction:column;gap:14px;align-items:flex-start;border-radius:0;
+  .hdr-bandwrap{padding-left:0;padding-right:0;order:-1;}
+  .hdr{flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;
+    gap:8px 14px;border-radius:0;padding-top:28px;padding-bottom:28px;
     padding-left:calc(var(--pad) + var(--ti));padding-right:calc(var(--pad) + var(--ti));}
-  .hdr-nav{flex-wrap:wrap;gap:12px 24px;}
-  .hdr-masthead{flex-direction:column;gap:18px;padding-top:26px;padding-bottom:22px;}
+  .hdr-nav{display:contents;}
+  .hdr-link,.hdr-support{font-size:13px;}
+  .hdr-support{border:0;padding:0;border-radius:0;color:rgba(20,20,20,.62);}
+  .hdr-masthead{flex-direction:column;gap:18px;padding-top:40px;padding-bottom:22px;}
 
-  /* homepage table: horizontal scroll; rows align to full width so the
-     rules span the whole scroll; header not sticky on mobile */
-  .db-table{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  .db-scroll{width:max-content;min-width:100%;}
-  .trow{gap:16px;}
-  .trow--head{position:static;top:auto;}
+  /* homepage table: tighter gap + left-aligned controls on mobile */
+  .trow{gap:10px;}
+  .db-tools{justify-content:flex-start;}
+  .ctl-menu{left:0;right:auto;}
+  .db-foot{text-align:left;}
 
-  /* footer: let the links wrap so nothing is cut off */
+  /* footer: links wrap; blank line before the project note; less gap on top */
+  .ftr{margin-top:40px;}
   .ftr-row{flex-wrap:wrap;}
+  .ftr-callout{padding-top:16px;}
 
-  /* foundry: key facts in a single column */
-  .fd-keyfacts{grid-template-columns:1fr;}
-  .kf{border-right:0 !important;}
+  /* foundry: key facts in two columns */
+  .fd-keyfacts{grid-template-columns:repeat(2,1fr);}
+  .kf{border-right:1px solid var(--hair);}
+  .kf:nth-child(3n){border-right:1px solid var(--hair);}
+  .kf:nth-child(2n){border-right:0;}
   .kf--empty{display:none;}
 
   /* foundry & guide: sections stack, no columns; bigger section numbers */
