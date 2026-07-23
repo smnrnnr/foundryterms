@@ -1,5 +1,5 @@
 {
-  "_note": "Table columns for the overview. 'key' must match the keys under 'table' in foundries.json. 'always' = cannot be hidden. 'default' = visible on load.",
+  "_note": "Table columns for the overview. ’key’ must match the keys under ’table’ in foundries.json. ’always’ = cannot be hidden. ’default’ = visible on load.",
   "columns": [
     { "key": "name",     "label": "Foundry",       "always": true, "default": true  },
     { "key": "licensee", "label": "Licensee",      "default": true  },

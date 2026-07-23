@@ -9,7 +9,7 @@ const columns = columnsData.columns;
 const defaultVisible = columns.filter(c => c.default);
 
 function gridCols(cols) {
-  return cols.map(c => c.key === "name" ? "minmax(220px,1.6fr)" : "minmax(110px,1fr)").join(" ");
+  return cols.map(c => c.key === "name" ? "minmax(180px,1.6fr)" : "minmax(120px,1fr)").join(" ");
 }
 
 const initialGrid = gridCols(defaultVisible);
@@ -118,9 +118,15 @@ const totalCount = columns.length;
     let asc = true;
 
     function gridCols() {
+      const mobile = window.matchMedia("(max-width:720px)").matches;
+      const narrow = window.matchMedia("(max-width:1080px)").matches;
       return COLS
         .filter(c => visible[c.key])
-        .map(c => c.key === "name" ? "minmax(220px,1.6fr)" : "minmax(110px,1fr)")
+        .map((c, i) => {
+          if (mobile) return i < 2 ? "calc(50vw - 25px)" : "150px";
+          if (narrow) return c.key === "name" ? "150px" : "minmax(130px,1fr)";
+          return c.key === "name" ? "minmax(180px,1.6fr)" : "minmax(120px,1fr)";
+        })
         .join(" ");
     }
 
@@ -180,6 +186,10 @@ const totalCount = columns.length;
       asc = !asc;
       sortRows();
     });
+
+    updateTable();
+    let _resizeT;
+    window.addEventListener("resize", () => { clearTimeout(_resizeT); _resizeT = setTimeout(updateTable, 150); });
   </script>
 
 </Base>

@@ -1,5 +1,5 @@
 {
-  "_note": "Content for the buying guide page. 'intro' = short text in the site header. 'sections' = numbered sections. 'body' = array of paragraphs. 'list' = optional bullet list. 'example' = callout box on the right.",
+  "_note": "Content for the buying guide page. ’intro’ = short text in the site header. ’sections’ = numbered sections. ’body’ = array of paragraphs. ’list’ = optional bullet list. ’example’ = callout box on the right.",
 
   "intro": "Font licensing used to be simple: one typeface, one price, done. Today foundries charge by company size, pageviews, or app count, add surcharges for logo use, and separate web from desktop. Staying on top of this avoids costly surprises and licensing gaps.",
 
@@ -8,6 +8,7 @@
       "n": "1",
       "title": "What you buy — and what you don’t",
       "body": [
+        "A type foundry is what the makers of typefaces are called — the companies that design and sell fonts.",
         "Buying a font doesn’t transfer ownership — it grants a license: the right to use the typeface in a specific way. The foundry retains ownership of the design.",
         "What is permitted is defined in the End User License Agreement, the EULA — the most important document when purchasing. A license covers certain media and is often tied to scale or reach."
       ],
@@ -36,7 +37,7 @@
       ],
       "list": [
         "Per workstation — price scales with the number of computers",
-        "By company size — based on the client's headcount",
+        "By company size — based on the client’s headcount",
         "By pageviews — web licenses tiered by monthly page views",
         "Flat fee — one price, unlimited use within the licensed medium"
       ],
@@ -49,7 +50,7 @@
         "An often overlooked question: who holds the license? This isn’t just a formality — it determines who can continue using the font when the project changes hands.",
         "Typically, the licensee uses the font themselves. Some foundries require the end client to hold the license, with the studio merely covered under it."
       ],
-      "example": { "kind": "fill", "label": "Example", "t": "A studio designs a brand identity. Two years later a different agency is brought in to continue the campaign. If the license was in the client's name, they can authorise the second agency. If it was only in the first studio's name, the client has no rights." }
+      "example": { "kind": "fill", "label": "Example", "t": "A studio designs a brand identity. Two years later a different agency is brought in to continue the campaign. If the license was in the client’s name, they can authorise the second agency. If it was only in the first studio’s name, the client has no rights." }
     },
     {
       "n": "5",
@@ -61,10 +62,10 @@
         "Logo / Wordmark — often subject to surcharge or a separate license",
         "Wayfinding / Signage systems — sometimes treated separately",
         "Packaging / Merchandise — products intended for sale",
-        "Modification — editing the font file isn't always permitted",
+        "Modification — editing the font file isn’t always permitted",
         "AI Training — many EULAs prohibit it explicitly"
       ],
-      "example": { "kind": "fill", "label": "Example", "t": "A logo is designed once but used for decades. That's precisely why many foundries treat logo use as its own paid category." }
+      "example": { "kind": "fill", "label": "Example", "t": "A logo is designed once but used for decades. That’s precisely why many foundries treat logo use as its own paid category." }
     },
     {
       "n": "6",

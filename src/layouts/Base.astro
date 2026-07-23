@@ -22,6 +22,7 @@ const NOINDEX = false;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   {NOINDEX && <meta name="robots" content="noindex, nofollow" />}
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -69,10 +70,6 @@ const NOINDEX = false;
     <div class="rule"></div>
     <div class="ftr-row mono">
       <span>Type Foundry Terms · 2026</span>
-      <span class="ftr-sep">·</span>
-      <a href="/imprint">Legal Notice</a>
-      <span class="ftr-sep">·</span>
-      <a href="/privacy">Privacy Policy</a>
     </div>
     <p class="mono ftr-note">
       This database is a reference guide, not legal advice. The information
@@ -80,10 +77,15 @@ const NOINDEX = false;
       the current EULA of the respective foundry.
     </p>
     <p class="mono ftr-callout">
-      Type Foundry Terms is a free, independent project — and we're looking for
-      a typeface to use across the site. If you're a foundry or designer,
-      <a href="mailto:mail@foundryterms.com?subject=Typeface%20for%20Type%20Foundry%20Terms">we'd love to hear from you →</a>.
+      Type Foundry Terms is a free, independent project — and we’re looking for
+      a typeface to use across the site. If you’re a foundry or designer,
+      <a href="mailto:mail@foundryterms.com?subject=Typeface%20for%20Type%20Foundry%20Terms">we’d love to hear from you →</a>.
     </p>
+    <div class="ftr-legal-row mono">
+      <a href="/imprint">Legal Notice</a>
+      <span class="ftr-sep">·</span>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
   </footer>
 
 </div>
