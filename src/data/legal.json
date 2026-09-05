@@ -38,11 +38,15 @@
     "sections": [
       {
         "h": "In brief",
-        "p": ["This website does not collect personal data. There is no registration, no contact forms, no cookies, no tracking, and no analytics tools. No data is shared with or sold to third parties."]
+        "p": ["This website uses no cookies and requires no registration or contact forms. It uses a privacy-friendly, cookieless analytics tool (Umami) that collects only anonymous, aggregated usage statistics and does not identify individual visitors. No personal data is sold or shared with third parties for advertising."]
       },
       {
         "h": "Server log files",
         "p": ["When you access the site, the hosting provider may store technically necessary access data (e.g. IP address, date and time, page accessed, browser type) in server log files. This is done to ensure reliable operation (Art. 6 Para. 1 lit. f GDPR) and is not merged with other data. Details are governed by the host’s privacy policy. The site is hosted on GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA)."]
+      },
+      {
+        "h": "Analytics (Umami)",
+        "p": ["To understand how the site is used, this website uses Umami, a privacy-focused, open-source analytics tool that we self-host on our own infrastructure (Vercel). Umami does not use cookies and does not collect or store personal data such as full IP addresses. It records only aggregated, anonymous information — for example page views, referring websites, approximate region (country level), and browser and device type. This data cannot be used to identify you and is not shared with third parties. The legal basis is our legitimate interest in the needs-based design and statistical evaluation of the website (Art. 6 Para. 1 lit. f GDPR)."]
       },
       {
         "h": "Fonts (jsDelivr CDN)",
