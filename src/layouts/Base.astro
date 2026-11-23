@@ -5,17 +5,13 @@ const {
   title = "Type Foundry Terms — Font Licensing Database",
   nav = "db",
   description = "Compare how type foundries license their fonts — who pays, desktop and web pricing, logo surcharges, trials and discounts. A reference database for designers.",
+  noindex = false,
 } = Astro.props;
 const intro = guideData.intro;
 const canonical = Astro.site
   ? new URL(Astro.url.pathname, Astro.site).href
   : Astro.url.href;
 
-// ⚠️ STILLER START: true = die Seite bittet Google, sie NICHT in den Suchindex
-// aufzunehmen. So lange auf true lassen, wie wir auf der Übergangs-Adresse sind
-// und Foundries aufbauen. Zum offiziellen Launch (eigene Domain, genug Inhalt)
-// auf false setzen — das ist der einzige nötige Schritt, um auffindbar zu werden.
-const NOINDEX = false;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +19,7 @@ const NOINDEX = false;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  {NOINDEX && <meta name="robots" content="noindex, nofollow" />}
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
@@ -35,6 +31,8 @@ const NOINDEX = false;
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta property="og:locale" content="en_US" />
+  <slot name="head" />
   <script defer src="https://umami-lyart-three.vercel.app/script.js" data-website-id="d8866789-436f-414e-9545-e3542ac3591e"></script>
 </head>
 <body>
@@ -51,7 +49,7 @@ const NOINDEX = false;
     <div class="hdr">
       <nav class="hdr-nav">
         <a class={"mono hdr-link" + (nav === "db" ? " is-active" : "")} href="/">Foundry Overview</a>
-        <a class={"mono hdr-link" + (nav === "guide" ? " is-active" : "")} href="/guide">How to Buy Fonts</a>
+        <a class={"mono hdr-link" + (nav === "guide" ? " is-active" : "")} href="/guide/">How to Buy Fonts</a>
       </nav>
       <a class="hdr-support mono" href="https://ko-fi.com/alltagstudio" target="_blank" rel="noopener" id="btn-support">Support</a>
     </div>
@@ -83,9 +81,9 @@ const NOINDEX = false;
       <a href="mailto:mail@foundryterms.com?subject=Typeface%20for%20Type%20Foundry%20Terms">we’d love to hear from you →</a>.
     </p>
     <div class="ftr-legal-row mono">
-      <a href="/imprint">Legal Notice</a>
+      <a href="/imprint/">Legal Notice</a>
       <span class="ftr-sep">·</span>
-      <a href="/privacy">Privacy Policy</a>
+      <a href="/privacy/">Privacy Policy</a>
     </div>
   </footer>
 

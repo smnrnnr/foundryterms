@@ -6,16 +6,19 @@ import data from "../data/foundries.json";
 // once and this updates with it.
 export async function GET({ site }) {
   // Trailing slashes match Astro's canonical URLs (it builds /guide/index.html).
+  // lastmod: foundry pages use their "geprueft" month; the overview uses the newest one.
+  const newest = data.foundries.map((f) => f.geprueft).sort().at(-1);
   const paths = [
-    "",
-    "guide/",
-    "imprint/",
-    "privacy/",
-    ...data.foundries.map((f) => `foundry/${f.slug}/`),
+    { p: "", lastmod: newest },
+    { p: "guide/" },
+    { p: "imprint/" },
+    { p: "privacy/" },
+    ...data.foundries.map((f) => ({ p: `foundry/${f.slug}/`, lastmod: f.geprueft })),
   ];
 
   const urls = paths
-    .map((p) => `  <url><loc>${new URL(p, site).href}</loc></url>`)
+    .map(({ p, lastmod }) =>
+      `  <url><loc>${new URL(p, site).href}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</url>`)
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>

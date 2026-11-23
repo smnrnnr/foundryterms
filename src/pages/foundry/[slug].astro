@@ -23,9 +23,43 @@ function fmtGeprueft(s) {
   return `${m} / ${y}`;
 }
 
-const metaDescription = `${foundry.name}: how they license fonts — pricing model, license types, extra costs, discounts, and legal terms at a glance.`;
+// Meta description built from the foundry's own data, so every page is distinct.
+const kf = (k) => foundry.keyfacts.find((x) => x.k === k);
+const fact = (k, label) => {
+  const x = kf(k);
+  return x ? `${label}: ${x.v.toLowerCase()}` : null;
+};
+const facts = [fact("Desktop", "desktop"), fact("Web", "web"), fact("Logo", "logo")].filter(Boolean).join(", ");
+const metaDescription = `How ${foundry.name} licenses its fonts — ${facts}. License types, extra costs and EULA terms, verified ${fmtGeprueft(foundry.geprueft)}.`;
+
+const site = "https://foundryterms.com/";
+const pageUrl = `${site}foundry/${foundry.slug}/`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": `${foundry.name} Font Licensing`,
+      "url": pageUrl,
+      "inLanguage": "en",
+      "description": metaDescription,
+      "dateModified": foundry.geprueft,
+      "about": { "@type": "Organization", "name": foundry.name, "url": foundry.urlFull },
+      "isPartOf": { "@id": site + "#website" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Foundry Overview", "item": site },
+        { "@type": "ListItem", "position": 2, "name": foundry.name, "item": pageUrl },
+      ],
+    },
+  ],
+};
 ---
-<Base title={`${foundry.name} — Type Foundry Terms`} nav="db" description={metaDescription}>
+<Base title={`${foundry.name} Font Licensing: Pricing & EULA Terms — Type Foundry Terms`} nav="db" description={metaDescription}>
+
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
 
   <main class="fd">
     <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
@@ -122,7 +156,7 @@ const metaDescription = `${foundry.name}: how they license fonts — pricing mod
 
     <div class="fd-foot">
       <a href="/" class="mono back"><span class="back-arrow" aria-hidden="true">←</span>Back to Overview</a>
-      <a href={`/foundry/${next.slug}`} class="mono fd-next">
+      <a href={`/foundry/${next.slug}/`} class="mono fd-next">
         Next foundry: {next.short || next.name}<span class="arr">→</span>
       </a>
     </div>

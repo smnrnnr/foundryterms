@@ -15,6 +15,25 @@ function gridCols(cols) {
 const initialGrid = gridCols(defaultVisible);
 const initialCount = defaultVisible.length;
 const totalCount = columns.length;
+
+const site = "https://foundryterms.com/";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": site + "#website", "name": "Type Foundry Terms", "url": site, "inLanguage": "en" },
+    {
+      "@type": "Dataset",
+      "name": "Type Foundry Terms — Font Licensing Database",
+      "description": "How independent type foundries license their fonts: who pays, desktop, web and app pricing models, logo surcharges, trials, discounts and legal terms, verified against each foundry’s EULA.",
+      "url": site,
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "creator": { "@type": "Organization", "name": "Type Foundry Terms", "url": site },
+      "dateModified": foundries.map(f => f.geprueft).sort().at(-1),
+      "hasPart": foundries.map(f => ({ "@type": "WebPage", "name": `${f.name} font licensing`, "url": `${site}foundry/${f.slug}/` })),
+    },
+  ],
+};
 ---
 <Base
   title="Type Foundry Terms — Font Licensing Database"
@@ -22,7 +41,10 @@ const totalCount = columns.length;
   description="Compare how type foundries license their fonts — who pays, desktop and web pricing, logo surcharges, trials and discounts. A reference database for designers."
 >
 
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+
   <main class="db">
+    <h1 class="visually-hidden">Font Licensing Database: How Type Foundries License Their Fonts</h1>
 
     <div class="db-tools">
       <div class="ctl" id="col-ctl">
@@ -67,7 +89,7 @@ const totalCount = columns.length;
       <div id="db-rows">
         {foundries.map((f) => (
           <a
-            href={`/foundry/${f.slug}`}
+            href={`/foundry/${f.slug}/`}
             class="trow trow--row"
             style={`grid-template-columns:${initialGrid}`}
             data-name={f.name}
