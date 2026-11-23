@@ -18,7 +18,12 @@ const canonical = Astro.site
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#ffffff" />
   {noindex && <meta name="robots" content="noindex, follow" />}
   <title>{title}</title>
   <meta name="description" content={description} />
@@ -28,7 +33,12 @@ const canonical = Astro.site
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content={new URL("/og.png", Astro.site)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Type Foundry Terms — how independent type foundries license their fonts, compared side by side." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={new URL("/og.png", Astro.site)} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta property="og:locale" content="en_US" />

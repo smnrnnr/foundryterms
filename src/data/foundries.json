@@ -493,7 +493,7 @@
         "web":      { "v": "Visitors", "sub": "unique monthly, per domain", "hl": true },
         "logo":     { "v": "Extension", "sub": "trademark license" },
         "trial":    { "v": "Restricted", "sub": "testing & pitching" },
-        "studi":    { "v": "Yes", "sub": "student price, see FAQ" },
+        "studi":    { "v": "Yes", "sub": "20% off" },
         "app":      { "v": "Own license", "sub": "mobile apps" },
         "signage":  { "v": "Own license", "sub": "OOH / DOOH / POS" },
         "transfer": { "v": "No", "sub": "non-transferable" },
@@ -507,7 +507,7 @@
         { "k": "App",           "v": "Own license",  "sub": "mobile apps" },
         { "k": "Trademark",     "v": "Extension",    "sub": "to register a logo" },
         { "k": "Trial",         "v": "Restricted",   "sub": "testing & pitching" },
-        { "k": "Students", "v": "Student price", "sub": "until end of studies" },
+        { "k": "Students", "v": "20% off", "sub": "until end of studies" },
         { "k": "Modification",  "v": "Prohibited",   "sub": "incl. AI use" },
         { "k": "Unlicensed use","v": "+200%",        "sub": "retroactive surcharge" },
         { "k": "Transferable",  "v": "No",           "sub": "non-transferable" },
@@ -547,10 +547,10 @@
         },
         {
           "n": "04", "title": "Discounts & Trials",
-          "lead": "Free trials for testing and pitching, and a student price — but no negotiated discounts otherwise.",
+          "lead": "Free trials for testing and pitching, and a 20% student discount — but no negotiated discounts otherwise.",
           "rows": [
             { "k": "Trial fonts", "t": "Trial License with a limited character set (OTF), strictly for testing, evaluation, and pitching in an internal, non-commercial context.", "hl": "Restricted" },
-            { "k": "Students", "t": "Students buy at “80% of the standard price” (FAQ wording; the EULA speaks of “a discount price of 80%”). Install on a personal computer and use until the end of studies; afterwards an upgrade to a Standard License is required. Educational institutions can request a custom Educational License.", "hl": "Student price" },
+            { "k": "Students", "t": "Students pay 80% of the standard price (20% off); install on a personal computer and use until the end of studies, then upgrade to a Standard License. Educational institutions can request a custom Educational License.", "hl": "20% off" },
             { "k": "No negotiated discounts", "t": "Optimo does not grant discounts to individuals or organisations; instead it offers flat, equitable pricing with lower prices for families, packages, and added styles." }
           ]
         },
@@ -935,7 +935,7 @@
     {
       "slug": "commercialtype",
       "name": "Commercial Type",
-      "short": "Commercial Type",
+      "short": "Commer\u00ADcial Type",
       "url": "commercialtype.com",
       "urlFull": "https://commercialtype.com",
       "location": "New York US",

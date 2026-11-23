@@ -1,5 +1,6 @@
-@import url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css');
-@import url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.css');
+/* Geist (SIL Open Font License, see /fonts/Geist-OFL.txt), self-hosted variable fonts */
+@font-face{font-family:"Geist";src:url("/fonts/Geist-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:"Geist Mono";src:url("/fonts/GeistMono-Variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap;}
 
 :root{
   --ink:#141414;
@@ -139,7 +140,7 @@ main{flex:1;padding:0 var(--pad);width:100%;}
 .trow--row:hover{z-index:1;}
 .trow--row>*{position:relative;z-index:1;}
 .td{min-width:0;}
-.td-name{font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;
+.td-name{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;font-family:var(--font-display);font-weight:500;letter-spacing:-.02em;
   font-size:calc(32px * var(--name-scale));line-height:1;
   display:block;transition:color .14s;}
 
