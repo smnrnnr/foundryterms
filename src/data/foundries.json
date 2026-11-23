@@ -935,7 +935,7 @@
     {
       "slug": "commercialtype",
       "name": "Commercial Type",
-      "short": "Commer\u00ADcial Type",
+      "short": "Commer­cial Type",
       "url": "commercialtype.com",
       "urlFull": "https://commercialtype.com",
       "location": "New York US",
@@ -1119,6 +1119,678 @@
             { "k": "Transferability", "t": "The license is non-transferable; reselling, renting, sublicensing or transferring the fonts is prohibited. On request, a purchase can be reassigned to the right client in the foundry’s records.", "hl": "Non-transferable" },
             { "k": "Applicable law", "t": "Governed by the laws of the province of Quebec, Canada; disputes go to a competent court in Montreal. EULA last updated September 2025." },
             { "k": "Breach & refunds", "t": "Unauthorized use is penalized at twice the total costs of that use. All sales are final, with no refunds." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "typotheque",
+      "name": "Typotheque",
+      "short": "Typotheque",
+      "url": "typotheque.com",
+      "urlFull": "https://www.typotheque.com",
+      "location": "The Hague NL",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "The Hague, NL" },
+        { "k": "Founded", "v": "1999" },
+        { "k": "Distribution", "v": "Direct" },
+        { "k": "Jurisdiction", "v": "NL / court not named" },
+        { "k": "EULA", "v": "View EULA →", "href": "https://www.typotheque.com/licensing/eula" }
+      ],
+      "table": {
+        "licensee": { "v": "User", "sub": "designer, not client" },
+        "sitz":     { "v": "The Hague", "sub": "NL" },
+        "desktop":  { "v": "Per user", "sub": "1 laptop + 1 desktop each" },
+        "web":      { "v": "Pageviews", "sub": "hosted or self-hosted" },
+        "logo":     { "v": "Included", "sub": "covered by Desktop" },
+        "trial":    { "v": "Restricted", "sub": "full set from 40 Club points" },
+        "studi":    { "v": "Yes", "sub": "80% educational", "hl": true },
+        "app":      { "v": "Per title", "sub": "one-time, apps & e-books" },
+        "signage":  { "v": "Included", "sub": "in Desktop" },
+        "transfer": { "v": "Conditional", "sub": "new licensee agrees in writing" },
+        "recht":    { "v": "NL", "sub": "Dutch law" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Per user", "sub": "multiplier for more users" },
+        { "k": "Web", "v": "Pageviews", "sub": "25,000/month hosted included", "hl": true },
+        { "k": "App / E-book", "v": "Per title", "sub": "one-time, product lifetime" },
+        { "k": "Logo",         "v": "Included",       "sub": "covered by Desktop" },
+        { "k": "Third party", "v": "50% of Desktop", "sub": "per agency or printer" },
+        { "k": "Corporate", "v": "Unlimited users", "sub": "Desktop + Web + App" },
+        { "k": "Trial", "v": "Restricted", "sub": "full set from 40 Club points" },
+        { "k": "Students", "v": "80% off", "sub": "on request, not online" },
+        { "k": "Licensee", "v": "User", "sub": "designer, not client" },
+        { "k": "Modification", "v": "Artwork only", "sub": "no new font files" },
+        { "k": "Transferable", "v": "Conditional", "sub": "new licensee agrees in writing" },
+        { "k": "Term", "v": "Perpetual", "sub": "hosted webfonts monthly" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "Desktop is counted by users with a price multiplier; webfonts by page views. Most licences are a one-time fee.",
+          "rows": [
+            { "k": "Pricing basis", "t": "Every purchase includes a Single-User Licence. More users within the same legal entity need a Multiple-User Licence, priced as a multiple of the regular price — ×1.2 for 2 users, ×3 for 10–14, ×8 for 100–124, ×25 for 750–999.", "sub": "Over 1,000 users on request. Prices are in euros." },
+            { "k": "Who licenses", "t": "Everyone who uses the fonts needs a licence. When a designer makes a poster for a client, it is the designer, as user of the font, who buys — not the client. If the client also uses the fonts, they need their own licence.", "sub": "The EULA adds that an advertising agency must ensure a licence is purchased for or by its client.", "hl": "User" },
+            { "k": "Term", "t": "Desktop, self-hosted webfont, server and app licences are a one-time fee for perpetual use. Hosted webfonts run as a monthly subscription; Broadcasting is priced by duration.", "hl": "Perpetual" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Separate licences for Desktop, Webfonts, App & E-book, Server and Broadcasting, plus Third-Party, Corporate and OEM options.",
+          "rows": [
+            { "k": "Desktop", "t": "Each authorised user may install the fonts on one portable device and one desktop or workstation at a single location. Covers anything you print, including logos, signage and graphics.", "hl": "Per user" },
+            { "k": "Web", "t": "Hosted webfonts include 25,000 page views per month; beyond that, €0.50 per additional 25,000 page views per month. Self-hosted webfonts are priced by monthly page views as a one-time, perpetual licence.", "hl": "Pageviews" },
+            { "k": "App & E-book", "t": "A one-time, per-title fee for embedding fonts read-only in one app or e-book, across several platforms, valid for the lifetime of the product. Apps with more than 10,000 users must contact the foundry." },
+            { "k": "Server & Broadcasting", "t": "Server licences are priced by the number of production servers. Broadcasting (TV, film titling) is priced per location and duration. OEM licences are not sold online." },
+            { "k": "Corporate", "t": "Combines Desktop, self-hosted Webfont (up to 10 million page views) and App use for one legal entity, with no limit on users, locations, domains or apps.", "sub": "The licence page says “pay once or annually”; the Corporate page describes a one-time payment with no recurring fees." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logos are covered by Desktop; agencies and printers working on a customer’s jobs need a half-price Third-Party licence.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Using Typotheque fonts in a logo is fine — a simple Desktop licence is all you need.", "hl": "Included in Desktop" },
+            { "k": "Subcontractor", "t": "A Third-Party licence extends a customer’s Desktop licence to an agency, printer, designer or service bureau, valid only for that customer’s jobs. Each third party needs its own.", "hl": "50% of Desktop" },
+            { "k": "Modification", "t": "The EULA prohibits modifying or adapting the font software; derivative works become Typotheque’s property. Per the help pages, letters may be modified for artwork, but new font files may not be created or distributed.", "hl": "Artwork only" },
+            { "k": "Embedding", "t": "Fonts may be embedded in PDFs only in secured, read-only mode. Letterform goods for sale, e-books and gaming devices need a special OEM licence." },
+            { "k": "AI Training", "t": "Not addressed in the EULA.", "hl": "Not stated" }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "An 80% educational discount and free trial fonts — the full character set needs Typotheque Club points.",
+          "rows": [
+            { "k": "Trial fonts", "t": "Trial fonts can be downloaded from each font’s page, up to 10 full packages a day, and kept as long as you like — for evaluation only.", "sub": "Club members with at least 40 points get the full character set and OpenType features; others get a limited character set.", "hl": "Restricted" },
+            { "k": "Students", "t": "An 80% educational discount for students, teachers, faculty and schools for educational purposes; not for school branding or promotion. Educational licences can’t be ordered online — contact the foundry.", "hl": "80% off" },
+            { "k": "Club discounts", "t": "No seasonal sales. Free Typotheque Club members get 50% off pre-release fonts, 25% off introductory prices on new releases, and can redeem points for discount codes." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Dutch law; no court named. License is transferable under conditions.",
+          "rows": [
+            { "k": "Company", "t": "Typotheque, based in The Hague, Netherlands; founded in 1999 by Peter Biľak. The EULA names Typotheque BV as licensor." },
+            { "k": "Transferability", "t": "The fonts may be transferred if the new licensee agrees in writing to be bound by the licence, sends a copy to Typotheque, and you destroy all your copies.", "hl": "Conditional" },
+            { "k": "Applicable law", "t": "The EULA is subject to Dutch law; it names no court or place of jurisdiction. The EULA carries no version number or date." },
+            { "k": "Breach & refunds", "t": "The licence is revocable and ends on any breach. Returns or exchanges only for defective fonts, with a receipt, within four weeks of purchase." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "nouvellenoire",
+      "name": "Nouvelle Noire",
+      "short": "Nouvelle Noire",
+      "url": "nouvellenoire.ch",
+      "urlFull": "https://nouvellenoire.ch",
+      "location": "Zürich CH",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "Zürich, CH" },
+        { "k": "Founders", "v": "Clovis Vallois & Anton Studer" },
+        { "k": "Distribution", "v": "Direct" },
+        { "k": "Jurisdiction", "v": "CH / Zürich" },
+        { "k": "EULA", "v": "EULA v4.1 →", "href": "https://nouvellenoire.ch/app/uploads/2023/07/NN_EULA_4.1.pdf" }
+      ],
+      "table": {
+        "licensee": { "v": "User", "sub": "whoever uses the fonts", "hl": true },
+        "sitz":     { "v": "Zürich", "sub": "CH" },
+        "desktop":  { "v": "Per seat", "sub": "per computer, one location" },
+        "web":      { "v": "Visitors", "sub": "unique monthly, per domain", "hl": true },
+        "logo":     { "v": "Extension", "sub": "quote on request" },
+        "trial":    { "v": "Restricted", "sub": "limited set; full on request" },
+        "studi":    { "v": "—", "sub": "not stated" },
+        "app":      { "v": "Extension", "sub": "apps & video games" },
+        "signage":  { "v": "Extension", "sub": "out-of-home use" },
+        "transfer": { "v": "Conditional", "sub": "full handover only" },
+        "recht":    { "v": "CH", "sub": "Zürich" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Per seat", "sub": "per computer, one location" },
+        { "k": "Web", "v": "Visitors", "sub": "unique monthly, per domain", "hl": true },
+        { "k": "App / Game", "v": "Extension", "sub": "quote on request" },
+        { "k": "Logo", "v": "Extension", "sub": "logotypes & brand marks" },
+        { "k": "Merchandise", "v": "Extension", "sub": "mass-produced goods" },
+        { "k": "Trial", "v": "Free", "sub": "limited glyph set; full on request" },
+        { "k": "Students", "v": "Not stated", "sub": "trial covers academic work" },
+        { "k": "Licensee", "v": "User", "sub": "licence holder ≠ billing party" },
+        { "k": "Modification", "v": "Prohibited", "sub": "only with consent" },
+        { "k": "Transferable", "v": "Conditional", "sub": "full handover only" },
+        { "k": "Law", "v": "Switzerland", "sub": "Zürich, CISG excluded" },
+        { "k": "Term", "v": "Perpetual", "sub": "one-time, upgradable" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "Two standard licences — Desktop by workstations, Web by monthly visitors — both one-time and perpetual. Everything else is a quoted extension.",
+          "rows": [
+            { "k": "Pricing basis", "t": "Desktop is priced by working stations (1, 3, 8, 15, 30, 60 or 100); Web Self-hosting by monthly visitors (3,000 up to 500,000). Matching tiers cost the same, and each style is sold with a Basic or a larger Standard character set.", "sub": "Single styles start at CHF 45–75 for one workstation, depending on family and character set. Prices in CHF; Swiss VAT is added for Swiss customers." },
+            { "k": "Who licenses", "t": "The shop separates the billing party (the person or agency who buys) from the licence holder (the person or agency who has access to and uses the fonts). A Desktop licence covers one company, business entity or institution only.", "hl": "User" },
+            { "k": "Term", "t": "Desktop and Web Self-hosting licences are one-time, perpetual and upgradable — no monthly or annual subscription fees.", "hl": "Perpetual" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Desktop and Web Self-hosting can be bought online; apps, logos, merchandise, ePub, social, video, advertising and broadcast all need a licence extension.",
+          "rows": [
+            { "k": "Desktop", "t": "Installation on a set number of computers within one company and one business location stated by the licensee. Covers printable and digital assets such as correspondence, books, periodicals, flyers and brochures. Each licence also allows one additional install on a personal desktop or laptop.", "hl": "Per seat" },
+            { "k": "Web Self-hosting", "t": "For one specified domain the licensee owns and controls, capped by unique monthly visitors. Covers @font-face in HTML and SVG only — not PDF, EPUB or native apps.", "hl": "Visitors" },
+            { "k": "Licence extensions", "t": "Required for apps, video games, logotypes and brand marks, mass-produced merchandise, ePub, server use, social media campaigns, streaming video, online advertising, out-of-home use and TV & cinema. A full buy-out is also offered. All by tailor-made quote.", "hl": "On request" },
+            { "k": "Formats", "t": "Desktop fonts as OTF, web fonts as WOFF, WOFF2 and EOT; variable fonts on request." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logos, signage and editable embedding all cost extra; modifying the fonts needs explicit consent.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Use in logotypes and brand marks requires a licence extension, priced on request.", "hl": "Extension" },
+            { "k": "Modification", "t": "Modifying the font software is prohibited, even for personal design needs, unless Nouvelle Noire consents; renaming the fonts needs prior written consent. The foundry offers modifications as a paid Custom Type service.", "hl": "Prohibited" },
+            { "k": "Subcontractor", "t": "A copy may be passed to a commercial printer or service company solely to output files; if they modify the text, they need their own licence.", "sub": "Server use accessible by unlicensed workstations is not allowed without the appropriate licence." },
+            { "k": "Embedding", "t": "Read-only embedding (e.g. secured PDF) is allowed. Editable documents with embedded fonts need a Font Embedding extension at an additional fee." },
+            { "k": "Political / religious", "t": "Use for political campaigns or by religious organisations to spread religious messages requires prior agreement from Nouvelle Noire." }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "Every font is free to try — but no student or educational discount is published.",
+          "rows": [
+            { "k": "Trial licence", "t": "All fonts are available as free trials via the checkout. Website trials have limited glyph sets; full versions can be requested by email. Allowed for tests, presentations, and academic, speculative or pitching work.", "sub": "Selling, publishing or broadcasting work made with trial fonts is a breach; commercial use requires a licence.", "hl": "Free" },
+            { "k": "Students", "t": "No student or educational discount is mentioned on the website or in the EULA; academic work is covered by the trial licence.", "hl": "Not stated" },
+            { "k": "Upgrades", "t": "Desktop and Web licences are described as upgradable; the cost of upgrading is not stated." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Swiss law, jurisdiction Zürich. Transferable only by full handover.",
+          "rows": [
+            { "k": "Company", "t": "Nouvelle Noire GmbH, Adolf-Lüchinger-Strasse 97, 8045 Zürich, Switzerland; founded by Clovis Vallois and Anton Studer (per the studio page, in 2011)." },
+            { "k": "Transferability", "t": "Transfer is not permitted, except when the third party agrees to all EULA terms and the licensee stops using and deletes every copy of the fonts.", "hl": "Full handover only" },
+            { "k": "Applicable law", "t": "Exclusively Swiss substantive law, with exclusive jurisdiction in Zürich; the CISG does not apply. EULA version 4.1, in force for purchases from 5 July 2023." },
+            { "k": "Refunds & warranty", "t": "Downloaded fonts are non-returnable and non-refundable. Defects must be reported within 30 days; a 40-day warranty covers replacement or refund of the licence fee." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "displaay",
+      "name": "Displaay Type Foundry",
+      "short": "Displaay",
+      "url": "displaay.net",
+      "urlFull": "https://displaay.net",
+      "location": "Prague CZ",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "Prague, CZ" },
+        { "k": "Founded", "v": "2014" },
+        { "k": "Distribution", "v": "Direct" },
+        { "k": "Jurisdiction", "v": "CZ / Czech courts" },
+        { "k": "EULA", "v": "Version 2.0.8 →", "href": "https://displaay.net/help/licenses" }
+      ],
+      "table": {
+        "licensee": { "v": "Client", "sub": "studio covered", "hl": true },
+        "sitz":     { "v": "Prague", "sub": "CZ" },
+        "desktop":  { "v": "Company size", "sub": "total headcount, min. 3" },
+        "web":      { "v": "Company size", "sub": "all domains, no traffic cap", "hl": true },
+        "logo":     { "v": "Own license", "sub": "Logo usage" },
+        "trial":    { "v": "Full", "sub": "internal, non-commercial" },
+        "studi":    { "v": "Yes", "sub": "50%, incl. commercial use" },
+        "app":      { "v": "Own license", "sub": "App + Game usage" },
+        "signage":  { "v": "Included", "sub": "in Desktop + Print" },
+        "transfer": { "v": "No", "sub": "non-transferable" },
+        "recht":    { "v": "CZ", "sub": "Czech courts" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Company size", "sub": "Desktop + Print, total headcount" },
+        { "k": "Web", "v": "Company size", "sub": "all domains, no traffic cap", "hl": true },
+        { "k": "App / Game", "v": "Own license", "sub": "multi-platform app counts once" },
+        { "k": "Video", "v": "Own license", "sub": "film, TV, streaming, ads" },
+        { "k": "Social media", "v": "Own license", "sub": "static & motion content" },
+        { "k": "Logo", "v": "Own license", "sub": "trademark registration covered" },
+        { "k": "Trial", "v": "Full", "sub": "one user, internal only" },
+        { "k": "Students", "v": "Yes", "sub": "50% students & educators" },
+        { "k": "Non-profit", "v": "Yes", "sub": "50% for non-profit projects" },
+        { "k": "Modification", "v": "Outlines only", "sub": "font files may not be altered" },
+        { "k": "Transferable","v": "No",             "sub": "non-transferable" },
+        { "k": "Term", "v": "Perpetual", "sub": "one-time fee, worldwide" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "Price depends only on company size and the usages needed — counted as the whole company’s headcount, not just the people using the fonts.",
+          "rows": [
+            { "k": "Pricing basis", "t": "The only price factors are the size of the licensee’s company (number of people working there) and the usages purchased. Licences start at a minimum of 3 people; prices are shown in the e-shop only.", "sub": "Displaay counts total company headcount, not designers or users, because the fonts end up in materials shared across all departments." },
+            { "k": "Who licenses", "t": "The licence must always be purchased by the client or project owner; designers and studios are covered by the client’s licence. Anyone buying on a client’s behalf may not use the fonts for their own benefit.", "hl": "Client" },
+            { "k": "Term", "t": "Perpetual, worldwide, one-time fee. No subscriptions are offered. The licence only takes effect once the fees are paid in full.", "hl": "Perpetual" },
+            { "k": "Upgrades", "t": "Growing companies must buy additional headcount; upgrades (more employees or extra usages) are made in the user account and only the upgrade price is charged." }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Desktop + Print, Web, Video, App + Game, Social Media and Logo are separate usages, plus an Unlimited option for any media.",
+          "rows": [
+            { "k": "Desktop + Print", "t": "All static, printed and offline output — print, packaging, merchandise, signage and wayfinding, outdoor advertising, static social posts, ePub and static web banners, including static files made in Canva or Figma.", "hl": "Company size" },
+            { "k": "Web", "t": "Any of the licensee’s websites, subdomains, SLDs and TLDs, plus HTML5 digital ads; self-hosting via @font-face only. No pageview or visitor limits are stated.", "hl": "No traffic cap" },
+            { "k": "Video", "t": "Animated and moving content — film, TV, streaming, live broadcast, video ads, title sequences, GIFs. Social media video is not included." },
+            { "k": "App + Game / Social Media", "t": "App + Game covers embedding in apps, games and software on any platform; the same app on several platforms counts as one. Social Media covers static and motion posts, stories and reels." },
+            { "k": "Unlimited", "t": "An enterprise option allowing use of the fonts in any media without restrictions." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logos need their own usage; outlined artwork may be edited, but the font files themselves may not.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "A separate Logo usage covers logos, logotypes and wordmarks, including trademark registration, for up to the number of the licensee’s people shown on the invoice. The logo may then be used in any format or media.", "hl": "Own license" },
+            { "k": "Modification", "t": "Altering, renaming, converting or creating derivatives of the fonts is prohibited. Outlined letters may be edited as vector artwork; variable axes may be adjusted. Custom glyph changes are done only by Displaay (from €150 per glyph).", "hl": "Outlines only" },
+            { "k": "Subcontractor", "t": "The licensee may share the fonts with contractors and freelancers, who may use them without a separate licence — but only to create materials for the licensee." },
+            { "k": "Ethics clause", "t": "Use in discriminatory contexts or industries violating human rights is prohibited; any political use requires Displaay’s written approval." },
+            { "k": "AI Training", "t": "Not addressed in the licence agreement, FAQ or terms.", "hl": "Not stated" }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "Free full trials for internal testing, and published discounts for students, graduates, non-profits and public projects.",
+          "rows": [
+            { "k": "Trial fonts", "t": "Free Full Trial Fonts for internal, non-commercial purposes such as sketching or presenting to a client; limited to one computer and one user, never for published or public-facing work.", "hl": "Full trials" },
+            { "k": "Students", "t": "50% off for students and educators, for personal or commercial projects; 25% for those who finished their studies last year.", "hl": "50%" },
+            { "k": "Non-profit & public", "t": "50% for projects for registered non-profits, NGOs, charities and cultural initiatives; 25% for projects in education, arts, healthcare or civic life (schools, galleries, hospitals, cities)." },
+            { "k": "Volume & loyalty", "t": "Bundle discounts from 20% (2nd licence) up to 70% (complete collection), plus loyalty tiers of 2.5–20% for returning customers by total spend.", "sub": "Discounts are selected during checkout; whether they can be combined is not stated." },
+            { "k": "Free fonts", "t": "Azeret Mono and Documan STC are free for personal or business use on one computer or for one user." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Czech law, Czech courts. License is non-transferable.",
+          "rows": [
+            { "k": "Company", "t": "Displaay Type Foundry s.r.o., registered in Prague 8, Czech Republic; founded in 2014 by Martin Vácha and co-led by Daniel Quisek." },
+            { "k": "Transferability", "t": "The licence is non-exclusive, non-assignable and non-transferable; sublicensing, selling, lending or leasing the fonts is prohibited.", "hl": "Non-transferable" },
+            { "k": "Applicable law", "t": "Governed by the laws of the Czech Republic; the relevant Czech courts decide disputes not settled amicably. Licence agreement version 2.0.8, 8 September 2026." },
+            { "k": "Breach & refunds", "t": "Any breach terminates the licence immediately. The 14-day statutory withdrawal right is waived on download; defective fonts are replaced free of charge if reported within 10 days." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "productiontype",
+      "name": "Production Type",
+      "short": "Production Type",
+      "url": "productiontype.com",
+      "urlFull": "https://productiontype.com",
+      "location": "Paris FR",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "Paris, FR & Shanghai, CN" },
+        { "k": "Founded", "v": "2014" },
+        { "k": "Distribution", "v": "Direct" },
+        { "k": "Jurisdiction", "v": "FR / Paris" },
+        { "k": "EULA", "v": "Version 7.023 →", "href": "https://help.productiontype.com/docs/EULA/" }
+      ],
+      "table": {
+        "licensee": { "v": "Client", "sub": "issued in client’s name", "hl": true },
+        "sitz":     { "v": "Paris", "sub": "FR · also Shanghai" },
+        "desktop":  { "v": "Company size", "sub": "total employees" },
+        "web":      { "v": "Company size", "sub": "per domain, no traffic metric", "hl": true },
+        "logo":     { "v": "Extension", "sub": "on request, quote only" },
+        "trial":    { "v": "Restricted", "sub": "basic Latin, pitches OK" },
+        "studi":    { "v": "Yes", "sub": "30% with proof of studies" },
+        "app":      { "v": "Per app", "sub": "cumulative downloads" },
+        "signage":  { "v": "Extension", "sub": "Architecture, on request" },
+        "transfer": { "v": "Conditional", "sub": "written consent" },
+        "recht":    { "v": "FR", "sub": "Paris" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Company size", "sub": "total employees" },
+        { "k": "Web", "v": "Company size", "sub": "per domain, no traffic metric", "hl": true },
+        { "k": "App", "v": "Per app", "sub": "cumulative downloads" },
+        { "k": "Social media", "v": "Own license", "sub": "by combined followers" },
+        { "k": "Logo", "v": "Extension", "sub": "on request, quote only" },
+        { "k": "Signage", "v": "Extension", "sub": "Architecture, on request" },
+        { "k": "Trial", "v": "Restricted", "sub": "basic Latin, pitches OK" },
+        { "k": "Students", "v": "Discount", "sub": "30% with proof of studies" },
+        { "k": "Licensee", "v": "Client", "sub": "issued in client’s name" },
+        { "k": "Modification", "v": "Outlines only", "sub": "no new fonts or subsetting" },
+        { "k": "Transferable", "v": "Conditional",  "sub": "with written consent" },
+        { "k": "Term", "v": "1 year", "sub": "auto-renews unless stated" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "Desktop and Web are priced by the client’s total headcount, apps by downloads, social media by followers — and licenses run for one year by default.",
+          "rows": [
+            { "k": "Pricing basis", "t": "Desktop and Web share a single metric: the number of people working at the licensee company, from “Single-person business” up to 400,000 employees or Unlimited. The Web help page states that monthly pageviews, unique visitors, or hits are not used.", "sub": "The EULA defines Desktop as a “User Group” of employees but bases the fee on the total number of employees in the Invoice." },
+            { "k": "Who licenses", "t": "The end user, defined in the EULA as a registered business entity. Studios can buy on behalf of a client, but the license and font files go directly to the client; a studio that needs the files itself needs a Third-Party extension.", "hl": "Client" },
+            { "k": "Term", "t": "Unless the quote or Invoice states otherwise, rights are granted for one year and renew automatically for the same period unless cancelled in writing three months before the end. Renewal prices are adjusted yearly in line with the Syntec Index.", "sub": "“Permanent” licenses exist under the EULA, lasting for the legal protection period of the font; Production Type avoids the word “perpetual”. Whether a permanent term can be bought online is not stated.", "hl": "1 year" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Five standard licenses can be bought online — Trial, Desktop, Web, Social Media, and Mobile App; everything else is an extension on request.",
+          "rows": [
+            { "k": "Desktop", "t": "Design and publication of printed graphics and static images — books, brochures, catalogues, and bitmap images on the web. Static text only.", "hl": "Company size" },
+            { "k": "Web", "t": "Self-hosted fonts via @font-face on the domain named in the Invoice plus unlimited subdomains. Banners, pop-ups, email newsletters, and downloadable PDFs are not covered.", "sub": "Production Type offers no font hosting service. Static images on the web fall under Desktop.", "hl": "No traffic limit" },
+            { "k": "Mobile App", "t": "Embedding in an app on phones and tablets, priced by cumulative downloads across the named platforms, from 5K to 20M or Unlimited. Desktop software and console games are excluded." },
+            { "k": "Social Media", "t": "Static images, videos, and organic or paid posts on named social accounts, priced by the combined number of followers, from 10K to 5M or Unlimited." },
+            { "k": "Extensions", "t": "Logo, Audio-Visual and Film, Third-Party, Advertising (OOH/DOOH), Online advertising, Digital POS, Packaging & Merchandise, OEM, Videogame, ePub/PDF, PowerPoint embedding, Architecture & signage, Server, and Analog Distribution — not available online, quote only." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logo, signage, broadcast, and packaging all require separate extensions, priced individually on request.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Logo, trademark, brand mark, or slogan use requires a Logo extension on top of Desktop, issued only to the entity exploiting the logo. Covers an outlined font, modified or not.", "sub": "Pricing is not published.", "hl": "Extension" },
+            { "k": "Signage / Wayfinding", "t": "Use on a designated location such as a building or exhibition requires the Architecture, signage, and environmental graphics extension.", "hl": "Extension" },
+            { "k": "Subcontractor", "t": "Printers may receive fonts for output only, and web developers for embedding only. Sharing with any other third party — freelancers, agencies, affiliates — requires a Third-Party extension.", "hl": "Extension" },
+            { "k": "Modification", "t": "Outlined text may be modified under Desktop or Logo licenses. Editing font files, creating new weights, subsetting, and format conversion are prohibited; custom requests by addendum only.", "hl": "Outlines only" },
+            { "k": "AI", "t": "The EULA does not mention AI. It states that any use not expressly granted is prohibited and that the absence of a specific prohibition is not an authorization.", "hl": "Not stated" }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "Free trial fonts with a reduced character set cover pitches and student work; students get 30% off full licenses.",
+          "rows": [
+            { "k": "Trial fonts", "t": "Free, selected during checkout. Basic Latin character set only (A–Z, a–z, figures, basic punctuation), limited support. Covers tests, comps, pitches, competitions, client presentations, and student work.", "sub": "No production or live use, commercial or not.", "hl": "Restricted" },
+            { "k": "Students", "t": "30% discount, claimed by email from a school address and/or with proof of studies. Educational institutions need a regular license.", "hl": "30% discount" },
+            { "k": "Non-profit", "t": "Requests for donated licenses are reviewed case by case under the foundry’s Corporate Social Responsibility charter; not all are accepted." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "French law, courts of Paris. License is transferable only with prior written consent.",
+          "rows": [
+            { "k": "Company", "t": "Production Systems SAS (dba Production Type), 15 rue Barbette, 75003 Paris; second office in Shanghai. Founded in 2014 by Jean-Baptiste Levée." },
+            { "k": "Transferability", "t": "The licensee may not assign or transfer the agreement without Production Type’s prior written consent; Production Type may assign it freely.", "hl": "Written consent" },
+            { "k": "Applicable law", "t": "Governed by the laws of France; exclusive jurisdiction of the competent courts of Paris, which Production Type may substitute at its discretion. CISG excluded. EULA version 7.023 (2025-10-01)." },
+            { "k": "Audit & territory", "t": "Production Type may audit records and equipment on 20 days’ notice during the term and for one year after. Standard licenses are valid in the licensee’s country by default.", "sub": "All sales are final; no refunds." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "feixen",
+      "name": "Studio Feixen Fonts",
+      "short": "Studio Feixen",
+      "url": "fonts.studiofeixen.ch",
+      "urlFull": "https://fonts.studiofeixen.ch",
+      "location": "Lucerne CH",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "Lucerne, CH" },
+        { "k": "Founded", "v": "2020" },
+        { "k": "Distribution", "v": "Direct" },
+        { "k": "Jurisdiction", "v": "CH / Lucerne" },
+        { "k": "EULA", "v": "Version 2.0 →", "href": "https://fonts.studiofeixen.ch/wp-content/uploads/downloads/Studio-Feixen-Fonts-EULA.pdf" }
+      ],
+      "table": {
+        "licensee": { "v": "Client", "sub": "if over 5 employees", "hl": true },
+        "sitz":     { "v": "Lucerne", "sub": "CH" },
+        "desktop":  { "v": "Per seat", "sub": "per computer, bundled with Web" },
+        "web":      { "v": "Visitors", "sub": "monthly, all channels combined", "hl": true },
+        "logo":     { "v": "Included", "sub": "in Commercial license" },
+        "trial":    { "v": "Restricted", "sub": "limited character set" },
+        "studi":    { "v": "Yes", "sub": "school & personal projects" },
+        "app":      { "v": "Included", "sub": "counts toward visitors" },
+        "signage":  { "v": "Included", "sub": "in Commercial license" },
+        "transfer": { "v": "No", "sub": "non-transferable" },
+        "recht":    { "v": "CH", "sub": "Lucerne" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Per seat", "sub": "by number of computers" },
+        { "k": "Web", "v": "Visitors", "sub": "monthly, all channels combined", "hl": true },
+        { "k": "Desktop + Web", "v": "Bundled", "sub": "not sold separately" },
+        { "k": "App", "v": "Included", "sub": "counts toward visitors" },
+        { "k": "Logo", "v": "Included", "sub": "in Commercial license" },
+        { "k": "Trial", "v": "Restricted", "sub": "limited character set" },
+        { "k": "Students", "v": "Educational", "sub": "school & personal projects" },
+        { "k": "Licensee", "v": "Client", "sub": "if over 5 employees" },
+        { "k": "Modification", "v": "Prohibited", "sub": "no conversion or derivatives" },
+        { "k": "Transferable","v": "No",             "sub": "non-transferable" },
+        { "k": "Law", "v": "Switzerland", "sub": "Lucerne" },
+        { "k": "Term", "v": "Perpetual", "sub": "worldwide, one-off" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "One Commercial license covers desktop and web together; seven levels pair a computer count with a monthly-visitor cap.",
+          "rows": [
+            { "k": "Pricing basis", "t": "Two variables set the level: the number of computers the fonts are installed on, and the combined monthly visitors of your websites, apps, social media campaigns, web ads and newsletters. The right level is the one where both are sufficient.", "sub": "Level 1 is 1–5 computers / 50K visitors, up to Level 7 at 501–1000 computers / 10 million visitors. Prices are in CHF and double with each level — a single Noi Grotesk style runs from CHF 75 to CHF 4,800." },
+            { "k": "Who licenses", "t": "Design agencies may use the fonts for their projects. The client must buy its own license if it wants to install the fonts or use them on the web, or if it has more than 5 employees.", "hl": "Client" },
+            { "k": "Term", "t": "A perpetual, worldwide, non-exclusive license. Licenses are cumulative: to cover more users, place a new order for the same font with the additional level.", "hl": "Perpetual" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Commercial (Levels 1–7), Enterprise, Trial, Educational and 3rd Party licenses — there are no separate app, logo or social licenses.",
+          "rows": [
+            { "k": "Commercial", "t": "Only sold as a package of desktop and web use; Studio Feixen does not sell a license for just one use case. Covers desktop apps, printed and digital documents, design objects, signage and logos, plus websites, apps, social media, web ads and newsletters.", "hl": "Desktop + Web" },
+            { "k": "Web / App", "t": "Fonts may be installed on your server and embedded in a website or app. App use is not licensed separately — it counts toward the monthly-visitor total.", "hl": "Visitors" },
+            { "k": "Enterprise", "t": "Tailored to a company’s requirements when Level 7 isn’t enough; terms are set out in a separate agreement. Quotes via shop@studiofeixen.ch." },
+            { "k": "3rd Party", "t": "You may share the fonts with third parties who work for you or are directly associated with you, but never make them publicly available. The EULA does not say whether this needs a separate purchase.", "sub": "No price or separate product for it appears in the store." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logos and signage are included; modifying or converting the fonts is not allowed.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Creating logos and trademarks is explicitly allowed under the Commercial license — no separate license or surcharge.", "hl": "Included" },
+            { "k": "Modification", "t": "You may not convert the fonts into other formats, modify, enhance, reverse engineer, decompile or disassemble them, or create new fonts based on their design.", "hl": "Prohibited" },
+            { "k": "Unlicensed use", "t": "Use without a valid or sufficient license can be invoiced as a retroactive license at the regular price plus a surcharge of at least 200%. A breach must be resolved within two weeks, or the license is terminated." },
+            { "k": "AI Training", "t": "Not addressed in the EULA or on the wiki.", "hl": "Not stated" }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "Trial fonts for every family; the EULA includes an Educational License, but no price or process is published.",
+          "rows": [
+            { "k": "Trial fonts", "t": "Every family has a free trial download, for testing and evaluation only — no redistribution, reproduction or commercial use. Trial fonts have a limited character set.", "hl": "Limited set" },
+            { "k": "Students & teachers", "t": "Under the Educational License, students may use the fonts for school and personal projects, and teachers for teaching and teaching materials. For a commercial project, the client must buy its own Commercial license.", "sub": "The EULA does not say how the Educational License is obtained or whether it is free; the store lists no educational option.", "hl": "Educational" },
+            { "k": "Bundles", "t": "Family and full-family packages are priced below the sum of their styles; the store shows 25% off on most bundles (60% on the Ease Full Family) as of November 2026." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Swiss law, jurisdiction Lucerne. License is non-transferable.",
+          "rows": [
+            { "k": "Company", "t": "Studio Feixen GmbH, Löwenplatz 5, Lucerne, Switzerland. Studio Feixen Fonts was co-founded in 2020 by Felix Pfäffli (who founded Studio Feixen in 2009) and Robin Eberwein." },
+            { "k": "Transferability", "t": "The license is non-transferable and non-assignable. Fonts passed to third parties must always come with a copy of the EULA.", "hl": "Non-transferable" },
+            { "k": "Applicable law", "t": "Governed exclusively by Swiss law; place of performance and exclusive jurisdiction is Lucerne. The UN Convention on Contracts for the International Sale of Goods does not apply." },
+            { "k": "Warranty & refunds", "t": "The font software is guaranteed to work as specified for 30 days after delivery; the warranty lapses for converted or modified fonts. No refund policy is stated." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "milieu",
+      "name": "Milieu Grotesque",
+      "short": "Milieu",
+      "url": "myfonts.com",
+      "urlFull": "https://www.myfonts.com/collections/milieu-grotesque-foundry",
+      "location": "Santo Isidoro PT",
+      "geprueft": "2026-11",
+      "status": "Catalogue acquired by Monotype in March 2023; milieugrotesque.com now redirects to MyFonts, where the fonts are sold under Monotype’s EULAs.",
+      "identity": [
+        { "k": "Location", "v": "Santo Isidoro, PT (pre-2023)" },
+        { "k": "Founded", "v": "2010" },
+        { "k": "Distribution", "v": "MyFonts (Monotype)" },
+        { "k": "Jurisdiction", "v": "US / Massachusetts" },
+        { "k": "EULA", "v": "Monotype Desktop EULA →", "href": "https://www.myfonts.com/pages/license-agreement?id=eula_2275&eula_lang=eula_en" }
+      ],
+      "table": {
+        "licensee": { "v": "Everyone", "sub": "users must be employees", "hl": true },
+        "sitz":     { "v": "Santo Isidoro", "sub": "PT · now Monotype" },
+        "desktop":  { "v": "Per user", "sub": "1–10 users, one-off" },
+        "web":      { "v": "Pageviews", "sub": "per domain, annual", "hl": true },
+        "logo":     { "v": "Included", "sub": "covered by Desktop" },
+        "trial":    { "v": "None", "sub": "online tester only" },
+        "studi":    { "v": "—", "sub": "not stated" },
+        "app":      { "v": "Per app", "sub": "annual, ≤ 25,000 users" },
+        "signage":  { "v": "Included", "sub": "static, via Desktop" },
+        "transfer": { "v": "Conditional", "sub": "full handover only" },
+        "recht":    { "v": "US", "sub": "Massachusetts" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Per user", "sub": "one-off, up to 10 users" },
+        { "k": "Company Desktop", "v": "Headcount", "sub": "annual, up to 250 employees" },
+        { "k": "Web", "v": "Pageviews", "sub": "per domain, annual", "hl": true },
+        { "k": "App", "v": "Per app", "sub": "annual, ≤ 25,000 registered users" },
+        { "k": "Logo",         "v": "Included",       "sub": "covered by Desktop" },
+        { "k": "Trial", "v": "None", "sub": "online type tester only" },
+        { "k": "Students", "v": "Not stated", "sub": "no discount published" },
+        { "k": "Distribution", "v": "MyFonts", "sub": "Monotype since 2023" },
+        { "k": "Modification", "v": "Prohibited",   "sub": "no derivatives" },
+        { "k": "AI Training", "v": "Prohibited", "sub": "metadata only" },
+        { "k": "Transferable", "v": "Conditional", "sub": "full handover only" },
+        { "k": "Term", "v": "Mixed", "sub": "Desktop perpetual; others annual" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "No longer sold directly — Monotype licenses the catalogue through MyFonts. Desktop is a one-off fee per user; every other licence runs for a year.",
+          "rows": [
+            { "k": "Important note", "t": "Monotype acquired five Milieu Grotesque families (Maison Neue, Maison, Boutique, Patron, Chapeau) in March 2023. milieugrotesque.com now redirects to MyFonts, and the licence partner is Monotype, not the foundry.", "sub": "The foundry’s own pre-acquisition terms (perpetual licences in EUR, sold exclusively via its website) no longer apply." },
+            { "k": "Pricing basis", "t": "Each licence has its own metric: users (Desktop), employee headcount (Company Desktop), monthly pageviews (Web), app titles (App), titles (Electronic Doc) and impressions (Digital Ad/Email).", "sub": "Maison Neue: single styles from €91.51, complete family of 40 fonts €1,384.60 (Desktop, 1 user; prices as displayed in EUR)." },
+            { "k": "Who licenses", "t": "The client’s name can be entered as License Owner at checkout. Licensed Desktop Users must be the licensee’s own employees, so agencies and freelancers need their own licence.", "hl": "Users = employees" },
+            { "k": "Term", "t": "Desktop is a one-off payment with no term stated in its EULA. Company Desktop, Web, App, Electronic Doc and Digital Ad/Email are annual and end on the last day of the term unless renewed.", "hl": "Perpetual / annual" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Desktop, Company Desktop, Webfonts, App, Electronic Doc and Digital Ad/Email are separate licences; server use is on request.",
+          "rows": [
+            { "k": "Desktop", "t": "Install on the workstations of 1–10 licensed users to create, print and distribute static material. Users are cumulative, not concurrent; more can be added later. Non-commercial, non-editable PDFs may embed the font.", "hl": "Per user" },
+            { "k": "Company Desktop", "t": "Annual, company-wide desktop rights by total headcount — tiers of 50, 100 and 250 employees. Allows a server only employees can access; contractors, agencies and freelancers are not covered." },
+            { "k": "Web", "t": "Self-hosted webfonts for a single website, tiered from 10,000 to 2,000,000 pageviews per month. Agencies or hosts handling several sites need one licence per website; web apps and SaaS are excluded.", "hl": "Pageviews" },
+            { "k": "App", "t": "One app title per year for iOS, Android or Windows Phone, with all licensed apps capped at 25,000 registered users in total." },
+            { "k": "Further licences", "t": "Electronic Doc (1–3 titles, for commercial PDFs and e-books), Digital Ad/Email (1–10 million impressions), and Server licences or more than 250 employees via Monotype Sales." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logos only need a Desktop licence; modification, server installs and AI training are excluded under Desktop.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Per the MyFonts FAQ, a Desktop licence is the minimum required to use a font in a logo; static images may be used on websites and in apps.", "hl": "Included in Desktop" },
+            { "k": "Modification", "t": "Modifying the font software in any way, including creating derivative works or converting it to other formats, is prohibited.", "hl": "Prohibited" },
+            { "k": "Server & DAM", "t": "Desktop may not be installed on any server or digital asset management system; Company Desktop allows a server accessible only to licensed employees." },
+            { "k": "AI Training", "t": "Using the fonts, rendered glyphs, outlines or kerning data to develop, train or fine-tune AI models is prohibited; only non-rendered metadata such as names and tags may be used.", "hl": "Prohibited" }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "No downloadable trial fonts and no published student discount — only MyFonts’ online type tester.",
+          "rows": [
+            { "k": "Trial fonts", "t": "MyFonts offers no trial fonts for the catalogue; “Try before you buy” means typing custom text into the online tester. The foundry’s former limited-character trial fonts are no longer offered.", "hl": "None" },
+            { "k": "Students", "t": "No student or educational discount is mentioned on the MyFonts licensing pages or FAQ.", "hl": "Not stated" },
+            { "k": "Returns", "t": "MyFonts lets you return a font within 7 days (by confirming its deletion) for a refund, or swap a wrongly purchased font within 14 days." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Massachusetts law by default, under Monotype’s Terms and Conditions of Business. Desktop rights transfer only as a complete handover.",
+          "rows": [
+            { "k": "Company", "t": "Founded in 2010 by Timo Gaessner and Alexander Colby, later managed by Maiko Gubler. Before the acquisition the company was Milieu Grotesque, LDA in Santo Isidoro, Portugal; the catalogue is now owned by Monotype Imaging Inc." },
+            { "k": "Transferability", "t": "All rights may be transferred to another person or entity if they accept the agreement, all copies are destroyed and the scope of use does not change. Renting, lending or sublicensing is prohibited.", "hl": "Full handover only" },
+            { "k": "Applicable law", "t": "The EULAs defer to Monotype’s Terms and Conditions of Business: Massachusetts law, with courts in Massachusetts. If contracted through Monotype Ltd. or Monotype GmbH, English law (London) or German law (Frankfurt/Main) applies instead." },
+            { "k": "Audit", "t": "Monotype may request proof of compliance, to be provided within 30 days; usage beyond the licensed amounts must be licensed and paid for." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "slug": "daltonmaag",
+      "name": "Dalton Maag",
+      "short": "Dalton Maag",
+      "url": "daltonmaag.com",
+      "urlFull": "https://www.daltonmaag.com",
+      "location": "London UK",
+      "geprueft": "2026-11",
+      "identity": [
+        { "k": "Location", "v": "London, UK" },
+        { "k": "Founder", "v": "Bruno Maag" },
+        { "k": "Distribution", "v": "Direct & FontPass (subscription)" },
+        { "k": "Jurisdiction", "v": "UK / England & Wales" },
+        { "k": "EULA", "v": "Version 3.1 · Oct 2026 →", "href": "https://www.daltonmaag.com/download/dama/LicenceAgreement.pdf" }
+      ],
+      "table": {
+        "licensee": { "v": "License holder", "sub": "contractors count as users", "hl": true },
+        "sitz":     { "v": "London", "sub": "UK" },
+        "desktop":  { "v": "Per user", "sub": "up to 5 devices each" },
+        "web":      { "v": "Pageviews", "sub": "monthly page impressions", "hl": true },
+        "logo":     { "v": "Included", "sub": "trademark registration OK" },
+        "trial":    { "v": "Full", "sub": "all fonts, pitching & academic" },
+        "studi":    { "v": "—", "sub": "not stated; trial for academic use" },
+        "app":      { "v": "Own license", "sub": "lifetime distribution units" },
+        "signage":  { "v": "Included", "sub": "public exhibition in Desktop" },
+        "transfer": { "v": "Conditional", "sub": "written notice, whole pack" },
+        "recht":    { "v": "England & Wales", "sub": "UK" }
+      },
+      "keyfacts": [
+        { "k": "Desktop", "v": "Per user", "sub": "up to 5 devices each" },
+        { "k": "Web", "v": "Pageviews", "sub": "monthly page impressions", "hl": true },
+        { "k": "App", "v": "Own license", "sub": "lifetime distribution units" },
+        { "k": "Logo", "v": "Included", "sub": "trademark registration OK" },
+        { "k": "Subscription", "v": "FontPass", "sub": "from $4,000 / month" },
+        { "k": "Trial", "v": "Full", "sub": "all fonts, pitching & academic" },
+        { "k": "Students", "v": "—", "sub": "not stated; trial for academic use" },
+        { "k": "Licensee", "v": "License holder", "sub": "contractors count as users" },
+        { "k": "Modification", "v": "Prohibited", "sub": "subsets for web/app only" },
+        { "k": "Transferable", "v": "Conditional", "sub": "written notice, whole pack" },
+        { "k": "Law", "v": "England & Wales", "sub": "UK" },
+        { "k": "Term", "v": "Perpetual", "sub": "pay once, upgrade any time" }
+      ],
+      "blocks": [
+        {
+          "n": "01", "title": "Pricing Model",
+          "lead": "Desktop is counted by users, web by monthly page impressions, apps and devices by lifetime distribution units — prices are shown upfront online.",
+          "rows": [
+            { "k": "Pricing basis", "t": "Install & Use is priced per user; each user’s licence covers up to five devices. Host & Link is priced by maximum page impressions per month, Embed & Distribute by total lifetime distribution units. Licences start at $42 for one user and a single weight of a single-edition family.", "sub": "Tiers on the Aktiv Grotesk page, for example: 1 to 3,500 users; 50k to 35M page impressions per month; 2k to 1.4M distribution units." },
+            { "k": "Who licenses", "t": "The EULA doesn’t say whether client or agency should hold the licence. It binds “you” as licensee, and its definition of User includes your employees, contractors and other authorized agents — so contractors working for the licence holder are counted as users.", "hl": "License holder" },
+            { "k": "Term", "t": "Standard licences are perpetual: pay once, use forever, and upgrade users or page impressions at any time. Renewable licences are available on request.", "sub": "Consumers may cancel within 14 days of purchase, provided the fonts haven’t been downloaded.", "hl": "Perpetual" }
+          ]
+        },
+        {
+          "n": "02", "title": "License Types",
+          "lead": "Three core licences — Install & Use, Host & Link and Embed & Distribute — plus Server and Unlimited options, bought separately with no forced bundling.",
+          "rows": [
+            { "k": "Install & Use", "t": "Desktop fonts on up to five devices per licensed user. Output may be used for print, publication, broadcast, streaming, social media and public exhibition. Non-editable PDFs may embed the fonts, but not commercial digital documents such as ebooks.", "hl": "Per user" },
+            { "k": "Host & Link", "t": "Self-hosted WOFF/WOFF2 via @font-face on any number of your own websites, on your own servers or a CDN, and in digital ads you control. You must measure page impressions with a recognized analytics platform at your own cost and block third-party referencing.", "hl": "Page impressions" },
+            { "k": "Embed & Distribute", "t": "App fonts embedded in apps, games, ebooks and hardware devices, counted as the cumulative total of devices supplied plus downloads or copies distributed. Personalized documents are excluded." },
+            { "k": "Server / Unlimited", "t": "A Server licence covers automated document generation, including personalized documents. Unlimited Perpetual bundles all licence types without limits, plus server installation and Software Bundle Distribution; the online shop switches to it automatically when it’s cheaper." },
+            { "k": "FontPass", "t": "A subscription to the whole library for organizations: FontPass Flex from $4,000 per month per licence type, or All-Access at $24,000 per month. Minimum term 12 months, up to five years; no record-keeping or reporting." }
+          ]
+        },
+        {
+          "n": "03", "title": "Additional Costs & Special Cases",
+          "lead": "Logo use is covered by Install & Use — the fonts themselves may only be changed by Dalton Maag.",
+          "rows": [
+            { "k": "Logo / Wordmark", "t": "Under Install & Use you may modify the output in artwork and register artwork containing it as a trademark — no separate logo licence.", "hl": "Included in Desktop" },
+            { "k": "Modification", "t": "You may not adapt, modify, convert or create derivative works of the font software. Automated subsetting and format conversion are allowed solely for hosting or embedding. Changes are offered as a paid Font Modification service.", "hl": "Prohibited" },
+            { "k": "AI", "t": "The fonts or their output may not be used to train generative AI models where the intent or result is replicating the style, weight or structure of the typeface design.", "hl": "Restricted" },
+            { "k": "Audit", "t": "Companies and organizations must, on request, document and certify within 30 days that all use conforms to their Licence Pack and the agreement." }
+          ]
+        },
+        {
+          "n": "04", "title": "Discounts & Trials",
+          "lead": "Free, fully featured trial fonts for the whole library — no student discount is mentioned.",
+          "rows": [
+            { "k": "Trial fonts", "t": "A free trial licence for all library fonts, static and variable, with all weights, styles and axes; not time-limited. Up to five devices and five simultaneous users, for academic, speculative or pitching work only. Registration required.", "sub": "Work made with trial fonts may not be sold, published, distributed or broadcast; it may be shown to a client for evaluation.", "hl": "Full library" },
+            { "k": "Students", "t": "No student or educational discount is stated. Students are encouraged to use the trial fonts for academic projects, which may be exhibited at formal academic events.", "hl": "Not stated" },
+            { "k": "Volume", "t": "Variable fonts include a matching static family pack, and the shop upgrades a basket to Unlimited Perpetual when that is cheaper. No other discounts are published." }
+          ]
+        },
+        {
+          "n": "05", "title": "Legal & Practical Info",
+          "lead": "Law of England and Wales. Licence is transferable after written notice, as a complete Licence Pack.",
+          "rows": [
+            { "k": "Company", "t": "Dalton Maag Ltd, registered in England, based in London; founded in 1991 by Swiss typeface designer Bruno Maag. A studio of around forty people." },
+            { "k": "Transferability", "t": "You may transfer all your rights if you notify Dalton Maag in writing beforehand, the new licensee accepts the whole agreement, you delete all copies, and the entire Licence Pack is transferred.", "hl": "With notice" },
+            { "k": "Applicable law", "t": "Governed by the laws of England and Wales. The EULA names no specific court or venue.", "sub": "The trial licence (Version 2.0, from 1 March 2022) is governed by the same law." },
+            { "k": "Amendments", "t": "The agreement may only be varied by an authorized officer of Dalton Maag. Version 3.1 applies to licences granted from 26 October 2026." }
           ]
         }
       ]
